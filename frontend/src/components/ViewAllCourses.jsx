@@ -3,8 +3,9 @@ import { ArrowLeft, Search, Star } from "lucide-react";
 import axios from "axios";
 import { serverUrl } from "../App";
 import { useNavigate } from "react-router-dom";
+import CourseCard from "./CourseCard";
 
-// Dummy data (replace with API or Redux data)
+// Dummy data
 const categories = [
   "App Development",
   "AI/ML",
@@ -16,29 +17,6 @@ const categories = [
   "Web Development",
   "Others",
 ];
-
-
-
-const CourseCard = ({ course }) => (
-  <div className="bg-white rounded-2xl shadow-md overflow-hidden w-40 sm:w-40 lg:w-60 xl:w-72 h-80" onClick={() =>  navigate(`/course/${course?._id}`)}>
-    <img
-      src={course.thumnil}
-      alt={course.title}
-      className="w-full h-40 object-cover"
-      />
-    <div className="p-4">
-      <h3 className="text-lg font-semibold">{course.title}</h3>
-      <p className="text-sm text-gray-500">{course.category}</p>
-      <div className="flex justify-between items-center mt-3">
-        <span className="text-gray-800 font-semibold">${course.price}</span>
-        <div className="flex items-center text-yellow-500">
-          <Star size={16} fill="currentColor" className="mr-1" />
-          <span>{course.rating}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 const ViewAllCourses = () => {
   const [courses,setCourses] = useState([]);
