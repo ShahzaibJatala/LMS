@@ -20,7 +20,7 @@ const categories = [
 
 
 const CourseCard = ({ course }) => (
-  <div className="bg-white rounded-2xl shadow-md overflow-hidden w-40 sm:w-40 lg:w-60 xl:w-72 h-80">
+  <div className="bg-white rounded-2xl shadow-md overflow-hidden w-40 sm:w-40 lg:w-60 xl:w-72 h-80" onClick={() =>  navigate(`/course/${course?._id}`)}>
     <img
       src={course.thumnil}
       alt={course.title}
