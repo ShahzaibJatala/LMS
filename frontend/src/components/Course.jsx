@@ -100,7 +100,7 @@ const handlePaymentSuccess = async () => {
     setAccessibleLectures(data?.accessibleLectures);
   } catch (error) {
     console.error("Error processing enrollment:", error);
-    alert("There was an error processing your enrollment. Please try again.");
+    alert("There was an error processing your enrollment. Login into your account to enroll.");
   }
 };
   

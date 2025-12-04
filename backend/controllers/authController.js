@@ -161,7 +161,7 @@ export const resetPassword = async (req,res) => {
 export const googleAuth = async (req,res) => {
     try {
         const {name, email, role} = req.body;
-        console.log("GoogleAuth req.body:", req.body);
+        // console.log("GoogleAuth req.body:", req.body);
 
         // Add validation
         if (!name || !email || !role) {

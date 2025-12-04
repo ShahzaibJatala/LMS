@@ -88,7 +88,6 @@ const googleLogin = async () => {
 
 
 
-
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100 px-4">
       <div className="flex w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden">

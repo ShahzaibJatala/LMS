@@ -24,7 +24,7 @@ const Nav = () => {
       const result = await axios.get(serverUrl + "/api/auth/logout", { withCredentials: true });
       await signOut(auth);
       dispatch(setUserData(null));
-      toast.warning("logout successfully");
+      toast.success("logout successfully");
 
     } catch (error) {
       // console.log(error);
