@@ -18,13 +18,14 @@ const Nav = () => {
   const role = user?.user?.role; // "student" or "teacher"
   
 
-  const handleLogout = async () => {
+   const handleLogout = async () => {
     try {
       
       const result = await axios.get(serverUrl + "/api/auth/logout", { withCredentials: true });
       await signOut(auth);
+      localStorage.removeItem("token");
       dispatch(setUserData(null));
-      toast.warning("logout successfully");
+      toast.success("logout successfully");
 
     } catch (error) {
       // console.log(error);
