@@ -99,6 +99,7 @@ export default function ExplorerCourses() {
               const IconComponent = course.icon;
               return (
                 <div
+                  onClick={() => navigate('/allcourses')}
                   key={course.id}
                   className="group cursor-pointer transform hover:scale-105 transition-all duration-300"
                 >
