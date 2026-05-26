@@ -18,7 +18,7 @@ const Nav = () => {
   const role = user?.user?.role; // "student" or "teacher"
   
 
-  const handleLogout = async () => {
+   const handleLogout = async () => {
     try {
       
       const result = await axios.get(serverUrl + "/api/auth/logout", { withCredentials: true });

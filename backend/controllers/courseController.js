@@ -56,7 +56,7 @@ export const editCourse = async (req, res) => {
     const { courseId } = req.params;
     const {
       title,
-      subTitle,
+      subtitle,
       description,
       category,
       level,
@@ -76,7 +76,7 @@ export const editCourse = async (req, res) => {
 
     const updateData = {
       title,
-      subTitle,
+      subtitle,
       description,
       category,
       level,

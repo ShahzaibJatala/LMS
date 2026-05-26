@@ -5,7 +5,7 @@ import { serverUrl } from "../App";
 import { useNavigate } from "react-router-dom";
 // import CourseCard from "./CourseCard";
 
-// Dummy data (replace with API or Redux data)
+// Dummy data
 const categories = [
   "App Development",
   "AI/ML",
@@ -17,7 +17,6 @@ const categories = [
   "Web Development",
   "Others",
 ];
-
 
 
 const CourseCard = ({ course }) => (

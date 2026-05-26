@@ -21,7 +21,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import SearchWithAi from "./components/SearchWithAi";
 
-export const serverUrl = "http://localhost:7000";
+export const serverUrl = "https://lms-lime-delta.vercel.app";
 
 function App() {
   const user = useSelector((state) => state.user.userData);
