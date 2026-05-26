@@ -21,11 +21,13 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import SearchWithAi from "./components/SearchWithAi";
 
-export const serverUrl = "https://lms-lime-delta.vercel.app";
+export const serverUrl = import.meta.env.VITE_SERVER_URL;
+
+// https://lms-lime-delta.vercel.app
 
 function App() {
   const user = useSelector((state) => state.user.userData);
-  console.log(user);
+ 
   const stripePromise = loadStripe("pk_test_51S5mdQQwAp0pcu7JkCbsyFQt8ql7LEt61eRb0mopIRvR0gWs1C3HOgF8l6u6p98gDBfp2LSEICtdi1HNQiR9W0zu00EUTgTk0W");
 
   getCurrentUser();
